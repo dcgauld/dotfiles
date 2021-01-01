@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# General
+alias ls='ls -hl'
+alias ll='ls -1Fhs'
+alias la='ls -AFhl'
+
+# Git
+alias gl='git pull'
+alias gp='git push'
+alias gpuo='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+alias gst='git status'
+
+# Docker
+alias dcu='docker-compose up'
+alias dcr='docker-compose run --rm'
+alias dcd='docker-compose down'
+alias drm='docker rm $(docker ps -a -q) -f; docker volume prune -f'

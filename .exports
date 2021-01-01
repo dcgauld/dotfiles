@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+if [ -d "$HOME/bin" ]; then
+  export PATH="$HOME/bin:$PATH"
+fi
+
+# Homebrew
+export PATH="$HOME/homebrew/bin:$PATH"
+
+# Oh My Zsh plugins
+export plugins=(
+  aws
+  brew
+  docker
+  docker-compose
+  gcloud
+  git
+  man
+  npm
+  nvm
+  osx
+  pip
+  pyenv
+  python
+  virtualenvwrapper
+)
+
+# Oh My Zsh configuration
+export HIST_STAMPS='yyyy-mm-dd'
+export UPDATE_ZSH_DAYS=7
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME='main'
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
