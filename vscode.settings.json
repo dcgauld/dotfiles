@@ -1,0 +1,19 @@
+{
+  "breadcrumbs.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.renderControlCharacters": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "files.insertFinalNewline": true,
+  "html.autoClosingTags": false,
+  "python.showStartPage": false,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": null,
+  "workbench.startupEditor": "newUntitledFile"
+}
