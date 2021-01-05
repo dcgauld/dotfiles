@@ -9,7 +9,6 @@ export PATH="$HOME/homebrew/bin:$PATH"
 
 # Oh My Zsh plugins
 export plugins=(
-  aws
   brew
   docker
   docker-compose
@@ -22,7 +21,7 @@ export plugins=(
   pip
   pyenv
   python
-  virtualenvwrapper
+  virtualenv
 )
 
 # Oh My Zsh configuration
