@@ -18,7 +18,7 @@ _install_homebrew() {
 _install_homebrew_packages() {
   echo 'Installing Homebrew packages...'
   brew update
-  brew install ffmpeg htop node python tldr
+  brew install ffmpeg gh htop node python tldr
 }
 
 _install_oh_my_zsh() {
