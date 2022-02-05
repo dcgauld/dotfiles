@@ -17,3 +17,6 @@
 [user]
 	email = dcgauld@gmail.com
 	name = David Gauld
+
+# [includeIf "gitdir:~/Projects/personal/"]
+# 	path = ~/Projects/personal/.gitconfig
