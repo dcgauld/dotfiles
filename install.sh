@@ -8,6 +8,7 @@ _install() {
   _install_homebrew
   _install_homebrew_packages
   _link_files
+  _set_mac_defaults
 }
 
 _install_homebrew() {
@@ -19,6 +20,12 @@ _install_homebrew_packages() {
   echo 'Installing Homebrew packages...'
   brew update
   brew install ffmpeg gh htop node python tldr
+  brew cask install docker imageoptim iterm2 rectangle visual-studio-code
+}
+
+_install_nvm() {
+  echo "Installing nvm..."
+  sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh)"
 }
 
 _install_oh_my_zsh() {
@@ -39,12 +46,27 @@ _link_files() {
   done;
 }
 
+_set_mac_defaults() {
+  # Enable tap to click.
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+  defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+  # Set dock options.
+  defaults write com.apple.dock tilesize -int 32
+  defaults write com.apple.dock show-process-indicators -bool true
+  defaults write com.apple.dock autohide-delay -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0
+  killall Dock
+}
+
 case "$1" in
   install_homebrew) _install_homebrew;;
   install_homebrew_packages) _install_homebrew_packages;;
   install_oh_my_zsh) _install_oh_my_zsh;;
   install_oh_my_zsh_theme) _install_oh_my_zsh_theme;;
   link_files) _link_files;;
+  set_mac_defaults) _set_mac_defaults;;
   *) _install;;
 esac
 
